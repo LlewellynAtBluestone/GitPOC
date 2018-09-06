@@ -6,3 +6,5 @@ CREATE TABLE [dbo].[MyTestTable]
 [Col3] [int] NULL
 ) ON [PRIMARY]
 GO
+ALTER TABLE [dbo].[MyTestTable] ADD CONSTRAINT [PK_MyTestTable] PRIMARY KEY CLUSTERED  ([MyPrimaryKey]) ON [PRIMARY]
+GO
