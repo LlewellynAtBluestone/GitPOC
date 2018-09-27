@@ -8,10 +8,11 @@ CREATE PROCEDURE [dbo].[MyTestSP]
 -- Create date: Today
 -- Description:	A test for POC
 -- =============================================
-
+@Increment int
 AS
 BEGIN
-	SELECT Col1,Col2,Col3
-	FROM dbo.MyTestTable
+	UPDATE dbo.MyTestTable
+	SET Col3 = Col3 + @Increment
+	WHERE MyPrimaryKey = 1
 END
 GO
